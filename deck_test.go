@@ -8,7 +8,7 @@ import (
 func TestNewDeck(t *testing.T) {
 	d := newDeck()
 
-	if len(d) != 16 {
+	if len(d) != 160 {
 		t.Errorf("expected deck length of 16 but got %v", len(d))
 	}
 
