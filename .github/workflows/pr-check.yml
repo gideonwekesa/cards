@@ -1,0 +1,25 @@
+name: PR Check
+
+on:
+  pull_request:
+    types:
+      - opened
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code from repository
+        uses: actions/checkout@v2
+      
+      - name: Setup go environment
+        uses: actions/setup-go@v2
+        with:
+          go-version: 1.17.8
+          stable: true
+
+      - name: Run Build
+        uses: go build .
+      
