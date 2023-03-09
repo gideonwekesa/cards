@@ -6,6 +6,9 @@ on:
       - opened
     branches:
       - main
+  
+  workflow_dispatch:
+    
 
 jobs:
   build:
