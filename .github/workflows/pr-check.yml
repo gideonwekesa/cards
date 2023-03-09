@@ -23,3 +23,10 @@ jobs:
       - name: Run Build
         run: go build .
       
+      - name: Run vet & lint
+        run: |
+          go vet .
+          go lint .
+
+      - name: Run tests
+        run: go test .
