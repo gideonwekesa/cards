@@ -21,5 +21,5 @@ jobs:
           stable: true
 
       - name: Run Build
-        uses: go build .
+        run: go build .
       
